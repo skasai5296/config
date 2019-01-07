@@ -1,19 +1,6 @@
 
 # aliases
 
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
 # ls with color
 case "$OSTYPE" in
     darwin*)
@@ -22,9 +9,20 @@ case "$OSTYPE" in
     linux*)
         LS_COLORS=$LS_COLORS:'di=36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43'
         export LS_COLORS
+        # enable color support of ls and also add handy aliases
+        if [ -x /usr/bin/dircolors ]; then
+            test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+            alias ls='ls --color=auto'
+            #alias dir='dir --color=auto'
+            #alias vdir='vdir --color=auto'
+
+            alias grep='grep --color=auto'
+            alias fgrep='fgrep --color=auto'
+            alias egrep='egrep --color=auto'
+        fi
         ;;
 esac
-alias ls='ls -G --color=auto'
+alias ls='ls -G'
 alias ll='ls -lG'
 alias la='ls -laG'
 
