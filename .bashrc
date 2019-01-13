@@ -42,6 +42,10 @@ alias sbr='source ~/.bashrc'
 alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 alias atgp='~/Documents/atcoder/autogit.sh'
+alias exA='gcc A.cpp&&./a.out'
+alias exB='gcc B.cpp&&./a.out'
+alias exC='gcc C.cpp&&./a.out'
+alias exD='gcc D.cpp&&./a.out'
 
 # prompt settings
 PS1='\[\e[38;5;45m\][\u@\h \W] \[\e[38;5;196m\]\[\e[0m\] '
