@@ -22,9 +22,8 @@ case "$OSTYPE" in
         fi
         ;;
 esac
-alias ls='ls -G'
-alias ll='ls -lG'
-alias la='ls -laG'
+alias ll='ls -l'
+alias la='ls -la'
 
 # Always list directory contents upon 'cd'
 cd() { builtin cd "$@"; ll; }
