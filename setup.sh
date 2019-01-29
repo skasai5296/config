@@ -2,7 +2,7 @@
 
 # this file creates symbolic links for dotfiles.
 
-DOT_FILES=(.vim .vimrc .tmux.conf .tmux.reset.conf .bashrc)
+DOT_FILES=(.vim .vimrc .tmux.conf .tmux.reset.conf .bashrc .bash_profile)
 
 for file in ${DOT_FILES[@]}
 do
