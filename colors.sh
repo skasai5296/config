@@ -1,7 +1,7 @@
 #!/bin/bash
 color(){
     for c; do
-        printf '\e[48;5;%dm%03d' $c $c
+        printf '\e[38;5;%dm%03d' $c $c
     done
     printf '\e[0m \n'
 }

@@ -46,10 +46,14 @@ alias exA='g++ A.cpp&&./a.out'
 alias exB='g++ B.cpp&&./a.out'
 alias exC='g++ C.cpp&&./a.out'
 alias exD='g++ D.cpp&&./a.out'
+alias exE='g++ E.cpp&&./a.out'
+alias exF='g++ F.cpp&&./a.out'
+alias exG='g++ G.cpp&&./a.out'
+alias exH='g++ H.cpp&&./a.out'
 
 # prompt settings
-PS1='\[\e[38;5;45m\][\u@\h \W] \[\e[38;5;196m\]\[\e[0m\] '
-PS2='> '
+PS1='\[\e[38;5;33m\][\u@\h \W] \[\e[38;5;171m\]\[\e[0m\] '
+PS2='\[\e[38;5;33m\]> \[\e[0m\]'
 
 bind 'set enable-bracketed-paste off'
 
