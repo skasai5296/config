@@ -1,7 +1,4 @@
-
-# aliases
-
-# ls with color
+#!/bin/bash # aliases # ls with color
 case "$OSTYPE" in
     darwin*)
         export LSCOLORS=gxfxcxdxbxegedabagacad
@@ -47,8 +44,15 @@ alias exC='g++ C.cpp&&./a.out'
 alias exD='g++ D.cpp&&./a.out'
 
 # prompt settings
-PS1='\[\e[38;5;45m\][\u@\h \W] \[\e[38;5;196m\]\[\e[0m\] '
-PS2='> '
+case "$OSTYPE" in
+    darwin*)
+        PS1=$'\[\e[38;5;45m\][\u@\h \W] \[\e[38;5;196m\]\[\e[0m\] '
+        ;;
+    linux*)
+        PS1=$'\[\e[38;5;45m\][\u@\h \W] \[\e[38;5;196m\]\u2605 \[\e[0m\] '
+        ;;
+esac
+PS2="> "
 
 bind 'set enable-bracketed-paste off'
 
