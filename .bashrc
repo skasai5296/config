@@ -1,4 +1,7 @@
-#!/bin/bash # aliases # ls with color
+#!/bin/bash 
+
+# aliases
+# ls with color
 case "$OSTYPE" in
     darwin*)
         export LSCOLORS=gxfxcxdxbxegedabagacad
@@ -42,6 +45,10 @@ alias exA='g++ A.cpp&&./a.out'
 alias exB='g++ B.cpp&&./a.out'
 alias exC='g++ C.cpp&&./a.out'
 alias exD='g++ D.cpp&&./a.out'
+alias exE='g++ E.cpp&&./a.out'
+alias exF='g++ F.cpp&&./a.out'
+alias exG='g++ G.cpp&&./a.out'
+alias exH='g++ H.cpp&&./a.out'
 
 # prompt settings
 case "$OSTYPE" in
