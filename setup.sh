@@ -2,7 +2,7 @@
 
 # this file creates symbolic links for dotfiles.
 
-DOT_FILES=(.vim .vimrc .tmux.conf .tmux.reset.conf .bashrc .bash_profile)
+DOT_FILES=(.vim .vimrc .tmux.conf .tmux.reset.conf .bashrc .bash_profile .ssh)
 
 for file in ${DOT_FILES[@]}
 do
@@ -14,5 +14,3 @@ do
         echo "made symbolic link: $file"
     fi
 done
-
-git submodule update --init --recursive
