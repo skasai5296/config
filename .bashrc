@@ -19,10 +19,10 @@ case "$OSTYPE" in
             alias grep='grep --color=auto'
             alias fgrep='fgrep --color=auto'
             alias egrep='egrep --color=auto'
-        fi
-        ;;
         alias pbcopy='xclip -selection c'
         alias pbpaste='xclip -selection c -o'
+        fi
+        ;;
 esac
 alias ll='ls -l'
 alias la='ls -la'
