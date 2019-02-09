@@ -21,6 +21,8 @@ case "$OSTYPE" in
             alias egrep='egrep --color=auto'
         fi
         ;;
+        alias pbcopy='xclip -selection c'
+        alias pbpaste='xclip -selection c -o'
 esac
 alias ll='ls -l'
 alias la='ls -la'
