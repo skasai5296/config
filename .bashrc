@@ -59,7 +59,7 @@ case "$OSTYPE" in
         PS1=$'\[\e[38;5;45m\][\u@\h \W] \[\e[38;5;196m\]\u2605 \[\e[0m\] '
         ;;
 esac
-PS2="> "
+PS2="\[\e[38;5;45m\]> \[\e[0m\]"
 
 bind 'set enable-bracketed-paste off'
 
