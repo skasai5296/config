@@ -1,5 +1,3 @@
-#!/bin/bash 
-
 # aliases
 # ls with color
 case "$OSTYPE" in
