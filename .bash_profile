@@ -12,10 +12,6 @@ fi
 
 export PATH="~/Documents/nlp_100/mongodb/bin:$PATH"
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
-
 # .bashrcの実行（存在する場合）
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
