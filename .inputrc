@@ -1,0 +1,11 @@
+# requires >= Bash 4.3
+# note: the prompt will not be updated if you use a custom PS1 which contains a newline character
+
+set editing-mode vi
+set keymap vi-command
+set show-mode-in-prompt on
+
+set vi-ins-mode-string \1\e[5 q\2
+set vi-cmd-mode-string \1\e[2 q\2
+
+# if it's configured correctly, your prompt will be prefixed with a `+` while in insert mode and a `:` when in command mode.

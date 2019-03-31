@@ -1,3 +1,6 @@
+set -o vi
+
+
 # aliases
 # ls with color
 case "$OSTYPE" in
