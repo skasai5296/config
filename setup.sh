@@ -14,3 +14,5 @@ do
         echo "made symbolic link: $file"
     fi
 done
+
+git submodule update --init
