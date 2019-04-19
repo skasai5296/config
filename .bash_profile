@@ -1,7 +1,3 @@
-
-# added by Anahonda3 5.1.0 installer
-export PATH="/Users/seito/anaconda3/bin:$PATH"
-
 ## Set path for pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
 if [ -d "${PYENV_ROOT}" ]; then
@@ -16,3 +12,4 @@ export PATH="~/Documents/nlp_100/mongodb/bin:$PATH"
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
+. /Users/seito/anaconda3/etc/profile.d/conda.sh

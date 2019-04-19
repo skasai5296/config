@@ -1,3 +1,5 @@
+$include /etc/.inputrc
+
 # requires >= Bash 4.3
 # note: the prompt will not be updated if you use a custom PS1 which contains a newline character
 
@@ -5,7 +7,15 @@ set editing-mode vi
 set keymap vi-command
 set show-mode-in-prompt on
 
-set vi-ins-mode-string \1\e[5 q\2
-set vi-cmd-mode-string \1\e[2 q\2
+set vi-ins-mode-string \1\e[34;1m\2(ins) \1\e[0m\2
+set vi-cmd-mode-string \1\e[31;1m\2(cmd) \1\e[0m\2
+
+# Show all completions as soon as I press tab, even if there's more than one
+set show-all-if-ambiguous on
+# Ignore case
+set completion-ignore-case on
+# on menu-complete, first display the common prefix, then cycle through the 
+# options when hitting TAB
+set menu-complete-display-prefix on
 
 # if it's configured correctly, your prompt will be prefixed with a `+` while in insert mode and a `:` when in command mode.
