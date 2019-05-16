@@ -6,10 +6,10 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
-export PATH="~/Documents/nlp_100/mongodb/bin:$PATH"
+export PATH="$HOME/Documents/nlp_100/mongodb/bin:$PATH"
 
 # .bashrcの実行（存在する場合）
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
-. /Users/seito/anaconda3/etc/profile.d/conda.sh
+. $HOME/anaconda3/etc/profile.d/conda.sh

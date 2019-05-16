@@ -85,5 +85,5 @@ esac
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
 
-# added by Anaconda3 5.1.0 installer
-export PATH="/Users/seito/anaconda3/bin:$PATH"
+. $HOME/anaconda3/etc/profile.d/conda.sh
+conda activate base
