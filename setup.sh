@@ -6,13 +6,19 @@ DOT_FILES=(.vim .vimrc .tmux.conf .tmux.reset.conf .bashrc .bash_profile .ssh .i
 
 for file in ${DOT_FILES[@]}
 do
-    if [ -a $HOME/$file ]; then
-        ln -s $HOME/dotfiles/$file $HOME/$file.dot
-        echo "file exists, created .dot file: $file"
-    else
-        ln -s $HOME/dotfiles/$file $HOME/$file
-        echo "made symbolic link: $file"
-    fi
+	if [ -a $HOME/$file ]; then
+		if [ -L $HOME/$file ]; then
+			unlink $HOME/$file
+			ln -s $HOME/dotfiles/$file $HOME/$file
+			echo "symbolic link existed, replaced link: $file"
+		else
+			ln -s $HOME/dotfiles/$file $HOME/$file.dot
+			echo "real file exists, created .dot link: $file"
+		fi
+	else
+		ln -s $HOME/dotfiles/$file $HOME/$file
+		echo "made symbolic link: $file"
+	fi
 done
 
 git submodule update --init

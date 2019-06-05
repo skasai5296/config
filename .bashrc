@@ -88,3 +88,5 @@ bind "set show-all-if-ambiguous on"
 export PATH=.:~/bin:$PATH
 export PATH=/usr/local/opt/ruby/bin:$PATH
 export PATH=$HOME/.gem/ruby.2.6.0/bin:$PATH
+. $HOME/anaconda3/etc/profile.d/conda.sh
+conda activate base
