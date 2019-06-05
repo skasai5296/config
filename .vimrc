@@ -38,11 +38,11 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'tomasiser/vim-code-dark'
 
-Plugin 'junegunn/fzf.vim'
+"Plugin 'junegunn/fzf.vim'
 
 Plugin 'scrooloose/nerdtree'
 
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
