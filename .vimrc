@@ -46,7 +46,7 @@ Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+filetype plugin on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -63,8 +63,21 @@ filetype plugin indent on    " required
 syntax enable                                 " enable syntax processing
 set cindent
 " autocmd FileType python setlocal foldmethod=indent smartindent shiftwidth=4 ts=4 et cinwords=if,elif,else,for,while,try,except,finally,def,class
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set autoindent
+set smartindent
+filetype on
+augroup fileTypeIndent
+    autocmd!
+    autocmd Filetype python setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd Filetype c,cpp,java setlocal cindent
+    autocmd Filetype ruby,javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
+
 autocmd VimEnter * NERDTree
-filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
 set number                                    " number lines

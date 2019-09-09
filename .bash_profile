@@ -1,3 +1,4 @@
+export LC_ALL=en_US.UTF-8
 export PATH="$HOME/Documents/nlp_100/mongodb/bin:$PATH"
 
 # .bashrcの実行（存在する場合）
