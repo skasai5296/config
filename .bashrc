@@ -45,6 +45,7 @@ alias sbr='source ~/.bashrc'
 alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 alias atgp='~/Documents/atcoder/autogit.sh'
+alias g++='g++ -std=c++14 -Wall'
 alias exA='g++ A.cpp&&./a.out'
 alias exB='g++ B.cpp&&./a.out'
 alias exC='g++ C.cpp&&./a.out'

@@ -5,7 +5,7 @@ filetype off                  " required
 
 set encoding=utf-8
 
-"         Settings for Vundle
+" Settings for Vundle
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf
@@ -36,7 +36,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-Plugin 'tomasiser/vim-code-dark'
+Plugin 'tomasr/molokai'
 
 "Plugin 'junegunn/fzf.vim'
 
@@ -62,7 +62,7 @@ filetype plugin indent on    " required
 
 syntax enable                                 " enable syntax processing
 set cindent
-autocmd FileType python setlocal foldmethod=indent smartindent shiftwidth=4 ts=4 et cinwords=if,elif,else,for,while,try,except,finally,def,class
+" autocmd FileType python setlocal foldmethod=indent smartindent shiftwidth=4 ts=4 et cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd VimEnter * NERDTree
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
@@ -91,10 +91,13 @@ map ; :Files<CR>
 map <C-o> :NERDTreeToggle<CR>
 map <C-l> :tabn<CR>
 map <C-h> :tabp<CR>
+map <C-x> :tabc<CR>
 
 set t_Co=256
 set t_BE=
-colorscheme codedark
+colorscheme molokai
+let g:molokai_original = 1
+set background=dark
 
 let g:ycm_keep_logfiles = 1
 let g:ycm_log_level = 'debug'
