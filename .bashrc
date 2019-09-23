@@ -18,9 +18,6 @@ case "$OSTYPE" in
         #alias dir='dir --color=auto'
         #alias vdir='vdir --color=auto'
 
-        alias grep='grep --color=auto'
-        alias fgrep='fgrep --color=auto'
-        alias egrep='egrep --color=auto'
         alias pbcopy='xclip -selection c'
         alias pbpaste='xclip -selection c -o'
         fi
@@ -28,6 +25,9 @@ case "$OSTYPE" in
 esac
 alias ll='ls -l'
 alias la='ls -la'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 # Always list directory contents upon 'cd'
 cd() { builtin cd "$@"; ll; }
