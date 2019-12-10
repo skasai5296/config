@@ -74,7 +74,7 @@ augroup fileTypeIndent
     autocmd!
     autocmd Filetype python setlocal tabstop=4 softtabstop=4 shiftwidth=4
     autocmd Filetype c,cpp,java setlocal cindent
-    autocmd Filetype ruby,javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd Filetype yaml,ruby,javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 autocmd VimEnter * NERDTree
