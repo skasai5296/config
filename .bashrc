@@ -59,12 +59,13 @@ alias exH='g++ H.cpp&&./a.out'
 case "$OSTYPE" in
     darwin*)
         PS1=$'\[\e[38;5;45m\][\u@\h \W] \[\e[38;5;196m\]\[\e[0m\] '
+        PS2="\[\e[38;5;45m\]> \[\e[0m\]"
         ;;
     linux*)
         PS1=$'\[\e[38;5;166m\][\u@\h \W] \[\e[38;5;196m\]\u2605 \[\e[0m\] '
+        PS2="\[\e[38;5;166m\]> \[\e[0m\]"
         ;;
 esac
-PS2="\[\e[38;5;45m\]> \[\e[0m\]"
 
 bind 'set enable-bracketed-paste off'
 
