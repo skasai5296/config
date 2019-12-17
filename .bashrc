@@ -18,9 +18,6 @@ case "$OSTYPE" in
         #alias dir='dir --color=auto'
         #alias vdir='vdir --color=auto'
 
-        alias grep='grep --color=auto'
-        alias fgrep='fgrep --color=auto'
-        alias egrep='egrep --color=auto'
         alias pbcopy='xclip -selection c'
         alias pbpaste='xclip -selection c -o'
         fi
@@ -28,6 +25,9 @@ case "$OSTYPE" in
 esac
 alias ll='ls -l'
 alias la='ls -la'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 # Always list directory contents upon 'cd'
 cd() { builtin cd "$@"; ll; }
@@ -59,12 +59,13 @@ alias exH='g++ H.cpp&&./a.out'
 case "$OSTYPE" in
     darwin*)
         PS1=$'\[\e[38;5;45m\][\u@\h \W] \[\e[38;5;196m\]\[\e[0m\] '
+        PS2="\[\e[38;5;45m\]> \[\e[0m\]"
         ;;
     linux*)
         PS1=$'\[\e[38;5;214m\][\u@\h \W] \[\e[38;5;196m\]\u2605 \[\e[0m\] '
+        PS2="\[\e[38;5;214m\]> \[\e[0m\]"
         ;;
 esac
-PS2="\[\e[38;5;45m\]> \[\e[0m\]"
 
 bind 'set enable-bracketed-paste off'
 
