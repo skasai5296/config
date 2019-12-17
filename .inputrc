@@ -6,16 +6,25 @@ $include /etc/.inputrc
 set editing-mode vi
 set keymap vi-command
 set show-mode-in-prompt on
+set vi-ins-mode-string \1\e[48;5;87m\e[1m\e[38;5;16m\2 INSERT \1\e[0m \2
+set vi-cmd-mode-string \1\e[48;5;229m\e[1m\e[38;5;16m\2 NORMAL \1\e[0m \2
+set keyseq-timeout 0
 
-set vi-ins-mode-string \1\e[34;1m\2(ins) \1\e[0m\2
-set vi-cmd-mode-string \1\e[31;1m\2(cmd) \1\e[0m\2
+# if it's configured correctly, your prompt will be prefixed with a `+` while in insert mode and a `:` when in command mode.
 
-# Show all completions as soon as I press tab, even if there's more than one
-set show-all-if-ambiguous on
+# Show all completions in color
+set colored-stats On
+# Append common prefixes and then show all completions with tab
+set show-all-if-unmodified On
 # Ignore case
 set completion-ignore-case on
 # on menu-complete, first display the common prefix, then cycle through the 
 # options when hitting TAB
 set menu-complete-display-prefix on
+# completion over common prefixes of 3 characters are displayed by ...
+set completion-prefix-display-length 3
+# completions are displayed with max 200 characters
+set completion-display-width 200
+# symlink directories to be displayed correctly
+set mark-symlinked-directories On
 
-# if it's configured correctly, your prompt will be prefixed with a `+` while in insert mode and a `:` when in command mode.
