@@ -1,3 +1,6 @@
 [submodule ".vim/bundle/Vundle.vim"]
 	path = .vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule "bash-it"]
+	path = bash-it
+	url = git@github.com:skasai5296/bash-it.git
