@@ -10,9 +10,13 @@ cd dotfiles
 ```
 then install Vundle plugins with
 ```
-vim .vimrc
+vim
 :PluginInstall
 :qa
+```
+and install `.bash_it` with 
+```
+.bash_it/install.sh
 ```
 
 dotfiles include
@@ -23,3 +27,5 @@ dotfiles include
 - `.tmux.reset.conf`
 - `.bashrc`
 - `.bash_profile`
+- `.bash_it`
+- `.inputrc`
