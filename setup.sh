@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git submodule update --init
+
 # this file creates symbolic links for dotfiles.
 
 DOT_FILES=(.vim .vimrc .tmux.conf .tmux.reset.conf .bash_it .bashrc .bash_profile .ssh .inputrc)
@@ -21,4 +23,3 @@ do
   fi
 done
 
-git submodule update --init
