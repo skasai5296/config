@@ -23,3 +23,7 @@ do
   fi
 done
 
+vim -c PluginInstall -c qa
+
+bash $HOME/.bash_it/install.sh
+
