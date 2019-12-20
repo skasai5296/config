@@ -3,4 +3,4 @@
 	url = https://github.com/VundleVim/Vundle.vim.git
 [submodule ".bash_it"]
 	path = .bash_it
-	url = git@github.com:skasai5296/bash-it.git
+	url = https://github.com/skasai5296/bash-it.git
