@@ -42,7 +42,14 @@ Plugin 'tomasr/molokai'
 
 Plugin 'scrooloose/nerdtree'
 
-"Plugin 'davidhalter/jedi-vim'
+Plugin 'dense-analysis/ale'
+let g:ale_linters = {
+    \   'python': ['flake8', 'pylint'],
+    \ }
+let g:ale_fixers = {
+    \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+    \   'python': ['autopep8', 'black', 'isort'],
+    \ }
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -106,11 +113,15 @@ map <C-l> :tabn<CR>
 map <C-h> :tabp<CR>
 map <C-x> :tabc<CR>
 
+set termguicolors
+" This is only necessary if you use "set termguicolors".
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+" fixes glitch? in colors when using vim with tmux
+set background=dark
 set t_Co=256
 set t_BE=
 colorscheme molokai
 let g:molokai_original = 1
-set background=dark
 
-let g:ycm_keep_logfiles = 1
-let g:ycm_log_level = 'debug'
