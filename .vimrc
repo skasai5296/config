@@ -113,7 +113,7 @@ map <C-l> :tabn<CR>
 map <C-h> :tabp<CR>
 map <C-x> :tabc<CR>
 
-if v:version > 704
+if &term =~# '256color' && ( &term =~# '^screen' || &term =~# '^tmux' )
     set termguicolors
     " This is only necessary if you use "set termguicolors".
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
