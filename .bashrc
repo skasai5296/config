@@ -13,7 +13,7 @@ conda activate base
 
 
 # Path to the bash it configuration
-export BASH_IT="/home/seito/.bash_it"
+export BASH_IT="$HOME/.bash_it"
 
 # Lock and Load a custom theme file.
 # Leave empty to disable theming.
