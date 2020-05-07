@@ -52,7 +52,8 @@ let g:ale_echo_msg_format = '%linter%: %s'
 let g:ale_python_flake8_executable = g:python3_host_prog
 let g:ale_python_flake8_options = '-m flake8'
 let g:ale_python_pylint_executable = g:python3_host_prog
-let g:ale_python_pylint_options = '-m pylint --disable=invalid-name,bad-continuation'
+let g:ale_python_pylint_options = '-m pylint --disable=invalid-name,bad-continuation,
+    \too-many-locals,too-many-arguments,missing-docstring'
 let g:ale_python_mypy_executable = g:python3_host_prog
 let g:ale_python_mypy_options = '-m mypy'
 
@@ -87,7 +88,8 @@ filetype plugin on    " required
 
 syntax enable                                 " enable syntax processing
 set cindent
-" autocmd FileType python setlocal foldmethod=indent smartindent shiftwidth=4 ts=4 et cinwords=if,elif,else,for,while,try,except,finally,def,class
+" autocmd FileType python setlocal foldmethod=indent smartindent shiftwidth=4
+" \ ts=4 et cinwords=if,elif,else,for,while,try,except,finally,def,class
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
