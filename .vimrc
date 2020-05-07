@@ -52,7 +52,7 @@ let g:ale_echo_msg_format = '%linter%: %s'
 let g:ale_python_flake8_executable = g:python3_host_prog
 let g:ale_python_flake8_options = '-m flake8'
 let g:ale_python_pylint_executable = g:python3_host_prog
-let g:ale_python_pylint_options = '-m pylint'
+let g:ale_python_pylint_options = '-m pylint --disable=invalid-name,bad-continuation'
 let g:ale_python_mypy_executable = g:python3_host_prog
 let g:ale_python_mypy_options = '-m mypy'
 
