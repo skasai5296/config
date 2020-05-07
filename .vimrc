@@ -50,7 +50,7 @@ let g:ale_linters = {
     \ }
 let g:ale_echo_msg_format = '%linter%: %s'
 let g:ale_python_flake8_executable = g:python3_host_prog
-let g:ale_python_flake8_options = '-m flake8'
+let g:ale_python_flake8_options = '-m flake8 --max-line-length=100'
 let g:ale_python_pylint_executable = g:python3_host_prog
 let g:ale_python_pylint_options = '-m pylint --disable=invalid-name,bad-continuation,
     \too-many-locals,too-many-arguments,missing-docstring'
@@ -67,7 +67,7 @@ let g:ale_python_autopep8_options = '-m autopep8'
 let g:ale_python_isort_executable = g:python3_host_prog
 let g:ale_python_isort_options = '-m isort'
 let g:ale_python_black_executable = g:python3_host_prog
-let g:ale_python_black_options = '-m black -l 79'
+let g:ale_python_black_options = '-m black'
 let g:ale_fix_on_save = 1
 
 " All of your Plugins must be added before the following line
