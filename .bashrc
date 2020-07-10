@@ -2,6 +2,7 @@ set -o vi
 
 bind 'set enable-bracketed-paste off'
 
+export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/usr/local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/opt/ruby/bin:$PATH
