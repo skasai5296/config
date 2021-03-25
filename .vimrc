@@ -47,29 +47,24 @@ Plugin 'dense-analysis/ale'
 let g:python3_host_prog = $CONDA_PREFIX . '/bin/python'
 let g:ale_echo_msg_format='%linter% %severity% (%code%): %s'
 let g:ale_linters = {
-    \   'python': ['flake8', 'mypy', 'pylint'],
+    \   'python': ['flake8', 'mypy'],
     \   'cpp': ['gcc', 'cppcheck', 'cpplint', 'cquery', 'flawfinder'],
     \ }
 let g:ale_echo_msg_format = '%linter%: %s'
 let g:ale_python_flake8_executable = g:python3_host_prog
-let g:ale_python_flake8_options = '-m flake8 --max-line-length=100'
-let g:ale_python_pylint_executable = g:python3_host_prog
-let g:ale_python_pylint_options = '-m pylint --disable=invalid-name,bad-continuation,
-    \too-many-locals,too-many-arguments,missing-docstring'
+let g:ale_python_flake8_options = '-m flake8'
 let g:ale_python_mypy_executable = g:python3_host_prog
 let g:ale_python_mypy_options = '-m mypy'
 
 " ale fixer configurations
 let g:ale_fixers = {
     \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-    \   'python': ['autopep8', 'black', 'isort'],
+    \   'python': ['black', 'isort'],
     \ }
-let g:ale_python_autopep8_executable = g:python3_host_prog
-let g:ale_python_autopep8_options = '-m autopep8'
 let g:ale_python_isort_executable = g:python3_host_prog
 let g:ale_python_isort_options = '-m isort'
 let g:ale_python_black_executable = g:python3_host_prog
-let g:ale_python_black_options = '-m black -l 100'
+let g:ale_python_black_options = '-m black'
 let g:ale_fix_on_save = 0
 
 " All of your Plugins must be added before the following line
