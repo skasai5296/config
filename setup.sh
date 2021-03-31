@@ -1,29 +1,34 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-git submodule update --init
 
-# this file creates symbolic links for dotfiles.
 
-DOT_FILES=(.vim .vimrc .tmux.conf .tmux.reset.conf .bash_it .bashrc .bash_profile .ssh .inputrc)
+install_dotfiles() {
+  printf "Downloading dotfiles...\n"
+  git clone "$DOTFILES_REPO" "$CONFIG_ROOT"
+  cd "$CONFIG_ROOT"
+  
+  # Create symbolic links to home.
+  for file in $(find dotfiles/ -maxdepth 1 -name '.[!.]*' -not -name '.git*'); do
+    echo $file
+    echo "$HOME/$(basename $file)"
+    #ln -sfnv "$file" "$HOME/(basename $file)"
+  done
+}
 
-pwd
-for file in ${DOT_FILES[@]}
-do
-  if [ -a $HOME/$file ]; then
-    if [ -L $HOME/$file ]; then
-      unlink $HOME/$file
-      ln -s dotfiles/$file $HOME/$file
-      echo "symbolic link existed, replaced link: $file"
-    else
-      ln -s dotfiles/$file $HOME/$file.dot
-      echo "real file exists, created .dot link: $file"
-    fi
-  else
-   ln -s dotfiles/$file $HOME/$file
-   echo "made symbolic link: $file"
-  fi
-done
+if [ -z "${CONFIG_ROOT:-}" ]; then
+  CONFIG_ROOT="$HOME/dev/github.com/skasai5296/dotfiles"; export CONFIG_ROOT
+fi
+DOTFILES_REPO="git@github.com:skasai5296/dotfiles.git"; export DOTFILES_REPO
 
-vim -c PluginInstall -c qa
+main() {
+  install_dotfiles
+}
 
-bash $HOME/.bash_it/install.sh
+main
+
+
+#git submodule update --init
+#
+#vim -c PluginInstall -c qa
+#
+#bash $HOME/.bash_it/install.sh

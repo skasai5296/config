@@ -1,14 +1,12 @@
-# dotfiles
+# Config and setup (mainly for macOS)
 
-For keeping dotfiles.
 
-to setup, run
+## Dotfiles setup
+
+Run
 ```
-git clone https://github.com/skasai5296/dotfiles.git --recursive
-cd dotfiles
-./setup.sh
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/skasai5296/dotfiles/master/setup.sh)"
 ```
-
 
 dotfiles include
 - `.ssh`
