@@ -13,12 +13,14 @@ deploy_dotfiles() {
   for file in $(find dotfiles -maxdepth 1 -name '.[!.]*' -not -name '.git*'); do
     ln -sfnv "$file" "$HOME/$(basename $file)"
   done
+
+  CONFIG_ROOT=$CONFIG_ROOT bash $CONFIG_ROOT/init/setup.sh
 }
 
 if [ -z "${CONFIG_ROOT:-}" ]; then
-  CONFIG_ROOT="$HOME/dev/github.com/skasai5296/dotfiles"; export CONFIG_ROOT
+  CONFIG_ROOT="$HOME/dev/github.com/skasai5296/config"; export CONFIG_ROOT
 fi
-DOTFILES_REPO="git@github.com:skasai5296/dotfiles.git"; export DOTFILES_REPO
+DOTFILES_REPO="git@github.com:skasai5296/config.git"; export DOTFILES_REPO
 
 main() {
   download_dotfiles
@@ -26,10 +28,3 @@ main() {
 }
 
 main
-
-
-#git submodule update --init
-#
-#vim -c PluginInstall -c qa
-#
-#bash $HOME/.bash_it/install.sh

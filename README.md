@@ -8,13 +8,7 @@ Run
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/skasai5296/dotfiles/master/setup.sh)"
 ```
 
-dotfiles include
-- `.ssh`
-- `.vim`
-- `.vimrc`
-- `.tmux.conf`
-- `.tmux.reset.conf`
-- `.bashrc`
-- `.bash_profile`
-- `.bash_it`
-- `.inputrc`
+For initializing macOS, run
+```
+CONFIG_ROOT=$HOME/dev/skasai5296/ bash -c "$(curl -fsSL https://raw.githubusercontent.com/skasai5296/dotfiles/master/setup.sh)"
+```
