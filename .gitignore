@@ -1,4 +1,2 @@
-*/.DS_Store
-.ssh/*
-!.ssh/config
-.vim/bundle/*
+.DS_Store
+dotfiles/.vim/bundle/*
