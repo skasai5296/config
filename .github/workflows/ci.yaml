@@ -17,4 +17,5 @@ jobs:
     - name: Setup via curl
       run: |
         REPO="https://raw.githubusercontent.com/skasai5296/config/${GITHUB_REF##*/}/setup.sh"
+        echo $REPO
         curl -fsSL $REPO | bash
