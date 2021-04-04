@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setup via curl
       run: |
-        REPO="https://raw.githubusercontent.com/skasai5296/config/${GITHUB_REF##*/}/setup.sh"
+        REPO="https://raw.githubusercontent.com/skasai5296/config/${{ github.head_ref }}/setup.sh"
         echo $REPO
         curl -fsSL $REPO | bash
