@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+set -euo pipefail -o posix
 
 download_dotfiles() {
   printf "Downloading dotfiles...\n"

@@ -14,8 +14,6 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Setup via curl
+    - name: Run check
       run: |
-        REPO="https://raw.githubusercontent.com/skasai5296/config/${{ github.head_ref }}/setup.sh"
-        echo $REPO
-        curl -fsSL $REPO | bash
+        bash setup.sh
