@@ -1,0 +1,20 @@
+name: Config CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+    types: [opened, synchronize, reopened]
+
+jobs:
+  checkout:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup via curl
+      run: |
+        REPO="https://raw.githubusercontent.com/skasai5296/config/${GITHUB_REF##*/}/setup.sh"
+        curl -fsSL $REPO | bash
