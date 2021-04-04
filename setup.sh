@@ -21,7 +21,7 @@ deploy_dotfiles() {
 if [ -z "${CONFIG_ROOT:-}" ]; then
   CONFIG_ROOT="$HOME/dev/github.com/skasai5296/config"; export CONFIG_ROOT
 fi
-DOTFILES_REPO="git@github.com:skasai5296/config.git"; export DOTFILES_REPO
+DOTFILES_REPO="https://github.com/skasai5296/config.git"; export DOTFILES_REPO
 
 main() {
   download_dotfiles
