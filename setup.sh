@@ -3,7 +3,7 @@
 
 download_dotfiles() {
   printf "Downloading dotfiles...\n"
-  git clone "$DOTFILES_REPO" "$CONFIG_ROOT"
+  git clone --recurse-submodules "$DOTFILES_REPO" "$CONFIG_ROOT"
 }
 
 deploy_dotfiles() {

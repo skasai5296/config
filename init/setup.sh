@@ -7,3 +7,5 @@ Darwin)
   done
   ;;
 esac
+
+vim +PluginInstall +qall
