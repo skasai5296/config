@@ -11,7 +11,7 @@ deploy_dotfiles() {
 
   cd "$CONFIG_ROOT"
   for file in $(find dotfiles -maxdepth 1 -name '.[!.]*' -not -name '.git*'); do
-    ln -sfnv "$file" "$HOME/$(basename $file)"
+    ln -sfnv "$CONFIG_ROOT/$file" "$HOME/$(basename $file)"
   done
 
   CONFIG_ROOT=$CONFIG_ROOT bash $CONFIG_ROOT/init/setup.sh
