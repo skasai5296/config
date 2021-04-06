@@ -3,8 +3,8 @@
 set -euo pipefail -o posix
 
 if [ -z ${ZSH+x} ]; then
-  # install oh-my-zsh
-  eval "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  # install oh-my-zsh. Ignore non-zero code.
+  eval "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
 fi
 
 exists() {
