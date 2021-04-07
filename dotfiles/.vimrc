@@ -141,5 +141,7 @@ endif
 set background=dark
 set t_Co=256
 set t_BE=
-colorscheme molokai
+if !exists('g:not_finish_vimplug')
+    colorscheme molokai
+endif
 let g:molokai_original = 1
