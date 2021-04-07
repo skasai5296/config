@@ -159,7 +159,7 @@
     },
     "tap": {
       "homebrew/cask": {
-        "revision": "2b059f37cd86c703dc7d0c6eb0c06cd34a8da872"
+        "revision": "5f01c8ae8e1336186c0e6fc9b14b943395d664fd"
       }
     },
     "cask": {

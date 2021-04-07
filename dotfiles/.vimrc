@@ -36,8 +36,6 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-Plugin 'tomasr/molokai'
-
 "Plugin 'junegunn/fzf.vim'
 
 Plugin 'scrooloose/nerdtree'
@@ -141,7 +139,5 @@ endif
 set background=dark
 set t_Co=256
 set t_BE=
-if !exists('g:not_finish_vimplug')
-    colorscheme molokai
-endif
+colorscheme molokai
 let g:molokai_original = 1
