@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+name = seito5296
+email = seito5296@gmail.com
+
+[ghq]
+root = ~/dev
