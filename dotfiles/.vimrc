@@ -1,6 +1,5 @@
 autocmd! bufwritepost .vimrc source %
 
-set nocompatible              " be iMproved, required
 filetype off                  " required
 
 set encoding=utf-8
@@ -67,7 +66,7 @@ let g:ale_fix_on_save = 0
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin on    " required
+filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -102,7 +101,12 @@ augroup END
 autocmd VimEnter * NERDTree
 set omnifunc=syntaxcomplete#Complete
 
+set textwidth=0                               " do not insert newlines on long lines
 set number                                    " number lines
+set hlsearch                                  " highlight searched terms
+set incsearch                                 " incrementally search
+set ignorecase                                " ignore case in search
+set smartcase                                 " do not ignore case when searching with capital letters
 set cursorline                                " different bg color for current line
 set ambiwidth=double                          " set unknown letters to width 2
 set list                                      " visualize invisible chars
