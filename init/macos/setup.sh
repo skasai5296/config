@@ -14,7 +14,7 @@ exists() {
 
 # install homebrew
 if ! exists "brew"; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  eval "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 brew bundle --verbose --file="$CONFIG_ROOT/init/macos/Brewfile"
