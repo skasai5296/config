@@ -1,0 +1,19 @@
+name: Config CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+    types: [opened, synchronize, reopened]
+
+jobs:
+  checkout:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run check
+      run: |
+        bash setup.sh
