@@ -1,4 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/seito/Documents/gen_caption/.git'
-let g:netrw_dirhist_2='/Users/seito/Applications'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/seito.kasai/dev/github.com/skasai5296/config'
+let g:netrw_dirhist_0='/Users/seito.kasai/dev/github.com/skasai5296/config/init'
+let g:netrw_dirhist_9='/Users/seito.kasai/dev/github.com/skasai5296/config'
+let g:netrw_dirhist_8='/Users/seito.kasai/dev/github.com/skasai5296/config/init'
+let g:netrw_dirhist_7='/Users/seito.kasai/dev/github.com/skasai5296/config'
+let g:netrw_dirhist_6='/Users/seito.kasai/dev/github.com/skasai5296/config/init'
+let g:netrw_dirhist_5='/Users/seito.kasai/dev/github.com/skasai5296/config'
+let g:netrw_dirhist_4='/Users/seito.kasai/dev/github.com/skasai5296/config/init'
+let g:netrw_dirhist_3='/Users/seito.kasai/dev/github.com/skasai5296/config'
+let g:netrw_dirhist_2='/Users/seito.kasai/dev/github.com/skasai5296/config/init'

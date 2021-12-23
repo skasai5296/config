@@ -5,5 +5,5 @@
 
 Run
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/skasai5296/dotfiles/master/setup.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/skasai5296/config/master/setup.sh)"
 ```
