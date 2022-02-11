@@ -264,7 +264,7 @@
     },
     "tap": {
       "homebrew/cask": {
-        "revision": "b19f5548c83d09af31824413044d095dbd48731e"
+        "revision": "04aad5cc078059c778f8ed8db908d08e3e7898ed"
       }
     },
     "cask": {
@@ -329,7 +329,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.3.14",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "0c3e1b5dfab078425fb0f9ed42726fdecff16a01",
+        "Homebrew/homebrew-core": "db1154b4d2a72bfc107adc2ac593450e748ee48f",
         "CLT": "13.2.0.0.1.1638488800",
         "Xcode": "13.1",
         "macOS": "11.6.2"
