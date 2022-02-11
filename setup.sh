@@ -5,6 +5,10 @@ set -euo pipefail -o posix
 download_dotfiles() {
   printf "Downloading dotfiles...\n"
   git clone --recurse-submodules "$DOTFILES_REPO" "$CONFIG_ROOT"
+  # workaround for pull request review testing
+  if [ -z "${GITHUB_HEAD_REF}" ]; then
+    git switch "${GITHUB_HEAD_REF}"
+  fi
 }
 
 deploy_dotfiles() {
