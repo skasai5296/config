@@ -259,18 +259,12 @@
               "sha256": "f61d19797f24b0bf90620f2a4bc10577e023d629d4958c18dc993bf4f94d8dba"
             }
           }
-        },
-        "options": {
-          "link": true,
-          "conflicts_with": [
-            "kubernetes-cli"
-          ]
         }
       }
     },
     "tap": {
       "homebrew/cask": {
-        "revision": "46045b6c86d62e6514773774cebcb72d7816bf37"
+        "revision": "b19f5548c83d09af31824413044d095dbd48731e"
       }
     },
     "cask": {

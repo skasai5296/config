@@ -1,9 +1,12 @@
-brew 'awscli', link: true, conflicts_with: ['awscli']
 brew 'git'
 brew 'jq'
 brew 'tmux'
-brew 'kubernetes-cli', link: true, conflicts_with: ['kubernetes-cli']
 brew 'tree'
+# HACK: because Brewfile does not support overwriting
+# existing binaries, we check beforehand if these do 
+# not exist on the system
+brew 'awscli' unless system "test -f /usr/local/bin/aws && echo 'skipping awscli because it exists in path'"
+brew 'kubernetes-cli' unless system "test -f /usr/local/bin/kubectl && echo 'skipping kubectl because it exists in path'"
 
 cask_args appdir: '/Applications'
 tap 'homebrew/cask'
