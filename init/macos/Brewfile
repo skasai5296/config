@@ -1,8 +1,8 @@
-brew 'awscli'
+brew 'awscli', link: true, conflicts_with: ['awscli']
 brew 'git'
 brew 'jq'
 brew 'tmux'
-brew 'kubernetes-cli', link: false
+brew 'kubernetes-cli', link: true, conflicts_with: ['kubernetes-cli']
 brew 'tree'
 
 cask_args appdir: '/Applications'

@@ -38,6 +38,12 @@
               "sha256": "542a9a2ae4cd1453b8c53e7b86e015b84749ff6ea1e09afa13c7139618801d93"
             }
           }
+        },
+        "options": {
+          "link": true,
+          "conflicts_with": [
+            "awscli"
+          ]
         }
       },
       "git": {
@@ -255,18 +261,21 @@
           }
         },
         "options": {
-          "link": false
+          "link": true,
+          "conflicts_with": [
+            "kubernetes-cli"
+          ]
         }
       }
     },
     "tap": {
       "homebrew/cask": {
-        "revision": "f194b7d4970530482adbfa4f1bb3f5e92de87d8b"
+        "revision": "46045b6c86d62e6514773774cebcb72d7816bf37"
       }
     },
     "cask": {
       "docker": {
-        "version": "4.4.2,73305",
+        "version": "4.5.0,74594",
         "options": {
           "full_name": "docker",
           "args": {
@@ -326,7 +335,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.3.14",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "3591f976f481631ae36b65184c87e61e15f760c2",
+        "Homebrew/homebrew-core": "0c3e1b5dfab078425fb0f9ed42726fdecff16a01",
         "CLT": "13.2.0.0.1.1638488800",
         "Xcode": "13.1",
         "macOS": "11.6.2"
