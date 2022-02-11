@@ -17,6 +17,8 @@ if ! exists "brew"; then
   curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
 fi
 
+brew update && brew upgrade
+
 # Install Google Chrome and Slack unless they're already installed.
 # These can't be done in the Brewfile because the autoupdater
 # breaks Homebrew.
