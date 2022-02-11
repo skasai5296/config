@@ -2,13 +2,14 @@ brew 'awscli'
 brew 'git'
 brew 'jq'
 brew 'tmux'
+brew 'kubernetes-cli', link: false
 brew 'tree'
 
 cask_args appdir: '/Applications'
 tap 'homebrew/cask'
 
 cask 'docker'
-cask 'google-chrome'
 cask 'visual-studio-code'
 cask 'karabiner-elements'
 cask 'rectangle'
+cask 'meetingbar'
