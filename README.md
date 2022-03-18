@@ -5,5 +5,7 @@
 
 Run
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/skasai5296/config/master/setup.sh)"
+git clone git@github.com:skasai5296/config.git
+cd config
+./setup.sh
 ```
