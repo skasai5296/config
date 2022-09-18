@@ -2,9 +2,9 @@
 
 set -euo pipefail -o posix
 
-if [ -z ${ZSH+x} ]; then
+if [[ -z ${ZSH+x} ]]; then
   # install oh-my-zsh. Ignore non-zero code.
-  curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash || true
+  eval "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh || true)"
 fi
 
 exists() {
@@ -14,16 +14,16 @@ exists() {
 
 # install homebrew
 if ! exists "brew"; then
-  curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
+  eval "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh || true)"
 fi
 
 # Install Google Chrome and Slack unless they're already installed.
 # These can't be done in the Brewfile because the autoupdater
 # breaks Homebrew.
-if [ ! -d "/Applications/Google Chrome.app" ]; then
+if [[ ! -d "/Applications/Google Chrome.app" ]]; then
   brew install --cask google-chrome
 fi
-if [ ! -d "/Applications/Slack.app" ]; then
+if [[ ! -d "/Applications/Slack.app" ]]; then
   brew install --cask slack
 fi
 
