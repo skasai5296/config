@@ -27,6 +27,7 @@ if [[ ! -d "/Applications/Slack.app" ]]; then
   brew install --cask slack
 fi
 
-brew bundle --verbose --force --file="$CONFIG_ROOT/init/macos/Brewfile"
+brew bundle --verbose --force --file="${CONFIG_ROOT}/init/macos/Brewfile"
 
-cp $CONFIG_ROOT/misc/ssh.config $HOME/.ssh/config
+cp "${CONFIG_ROOT}/misc/ssh.config" "${HOME}/.ssh/config"
+cat "${CONFIG_ROOT}/misc/zsh.config" >> "${HOME}/.zshrc"
