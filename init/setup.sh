@@ -4,9 +4,9 @@ set -euo pipefail -o posix
 
 case "$(uname -s)" in
 Darwin)
-  for file in "$CONFIG_ROOT/init/macos/*.sh"; do
-    bash $file
-  done
+  find "${CONFIG_ROOT}/init/macos/" -name '*.sh' -exec {} \;
+  ;;
+*)
   ;;
 esac
 
