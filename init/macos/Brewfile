@@ -2,6 +2,7 @@ brew 'git'
 brew 'jq'
 brew 'tmux'
 brew 'tree'
+brew 'peco'
 # HACK: because Brewfile does not support overwriting
 # existing binaries, we check beforehand if these do 
 # not exist on the system
