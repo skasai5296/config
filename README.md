@@ -5,7 +5,7 @@
 
 Run
 ```
-git clone git@github.com:skasai5296/config.git
+git clone --recursive git@github.com:skasai5296/config.git
 cd config
 ./setup.sh
 ```
