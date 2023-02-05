@@ -4,7 +4,7 @@ set -euo pipefail -o posix
 
 if [[ -z ${ZSH+x} ]]; then
   # install oh-my-zsh. Ignore non-zero code.
-  eval "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh || true)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 exists() {
@@ -14,7 +14,7 @@ exists() {
 
 # install homebrew
 if ! exists "brew"; then
-  eval "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh || true)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 # Install Google Chrome and Slack unless they're already installed.
