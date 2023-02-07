@@ -14,7 +14,8 @@ exists() {
 
 # install homebrew
 if ! exists "brew"; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  # disable posix temporarily for homebrew installation
+  sh -c "unset POSIXLY_CORRECT; $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 # Install Google Chrome and Slack unless they're already installed.
