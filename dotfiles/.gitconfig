@@ -3,10 +3,15 @@
         name = seito5296
         email = seito5296@gmail.com
 
+[core]
+        excludesfile = ~/.gitignore
+        fsmonitor = true
+        untrackedCache = true
+        pager = less -F -X
+
 [ghq]
         root = ~/dev
 
-# clearly makes git better
 [column]
         ui = auto
 [branch]
@@ -29,7 +34,6 @@
         pruneTags = true
         all = true
 
-# why the hell not?
 [help]
         autocorrect = prompt
 [commit]
@@ -37,19 +41,11 @@
 [rerere]
         enabled = true
         autoupdate = true
-[core]
-        excludesfile = ~/.gitignore
 [rebase]
         autoSquash = true
         autoStash = true
         updateRefs = true
 
-# a matter of taste (uncomment if you dare)
-
-[core]
-        # fsmonitor = true
-        # untrackedCache = true
-        pager = less -F -X
 [merge]
         # (just 'diff3' if git version < 2.3)
         conflictstyle = zdiff3
