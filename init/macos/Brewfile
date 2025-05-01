@@ -2,9 +2,11 @@ brew 'git'
 brew 'jq'
 brew 'tmux'
 brew 'tree'
+brew 'fzf'
 brew 'peco'
+
 # HACK: because Brewfile does not support overwriting
-# existing binaries, we check beforehand if these do 
+# existing binaries, we check beforehand if these do
 # not exist on the system
 brew 'awscli' unless system "test -f /usr/local/bin/aws && echo 'skipping awscli because it exists in path'"
 brew 'kubernetes-cli' unless system "test -f /usr/local/bin/kubectl && echo 'skipping kubectl because it exists in path'"
