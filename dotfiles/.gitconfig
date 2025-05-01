@@ -49,6 +49,7 @@
 [core]
         # fsmonitor = true
         # untrackedCache = true
+        pager = less -F -X
 [merge]
         # (just 'diff3' if git version < 2.3)
         conflictstyle = zdiff3
