@@ -4,7 +4,7 @@ set -euo pipefail -o posix
 
 if [[ -z ${ZSH+x} ]]; then
   # install oh-my-zsh. Ignore non-zero code.
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
 fi
 
 exists() {
@@ -30,5 +30,6 @@ fi
 
 brew bundle --verbose --force --file="${CONFIG_ROOT}/init/macos/Brewfile"
 
+mkdir -p "${HOME}/.ssh/config"
 cp "${CONFIG_ROOT}/misc/ssh.config" "${HOME}/.ssh/config"
 cat "${CONFIG_ROOT}/misc/zsh.config" >> "${HOME}/.zshrc"
