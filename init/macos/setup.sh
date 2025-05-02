@@ -30,6 +30,6 @@ fi
 
 brew bundle --verbose --force --file="${CONFIG_ROOT}/init/macos/Brewfile"
 
-mkdir -p "${HOME}/.ssh/config"
+mkdir -p "${HOME}/.ssh"
 cp "${CONFIG_ROOT}/misc/ssh.config" "${HOME}/.ssh/config"
 cat "${CONFIG_ROOT}/misc/zsh.config" >> "${HOME}/.zshrc"
